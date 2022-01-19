@@ -1,0 +1,1240 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <link rel="stylesheet" href="./assets/styles/index.css">
+</head>
+<body>
+    <header>
+        <div class="boite-entete">
+            <h1><abbr title="Cascading Style Sheets">CSS</abbr>3 de A à Z... Ou presque</h1>
+            <p>Par Émilie Caron</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#lettre-a" title="Lien vers la section de la lettre a">a</a></li>
+                <li><a href="#lettre-b" title="Lien vers la section de la lettre b">b</a></li>
+                <li><a href="#lettre-d" title="Lien vers la section de la lettre d">d</a></li>
+                <li><a href="#lettre-f" title="Lien vers la section de la lettre f">f</a></li>
+                <li><a href="#lettre-g" title="Lien vers la section de la lettre g">g</a></li>
+                <li><a href="#lettre-m" title="Lien vers la section de la lettre m">m</a></li>
+                <li><a href="#lettre-o" title="Lien vers la section de la lettre o">o</a></li>
+                <li><a href="#lettre-s" title="Lien vers la section de la lettre s">s</a></li>
+                <li><a href="#lettre-t" title="Lien vers la section de la lettre t">t</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+<!-- LETTRE A -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section A" aria-expanded="false" class="lettre-entete" id="lettre-a">
+                A 
+                <span class="details">pour animations et arrière-plans multiples</span>
+            </h2>
+            <section class="lettre-corps">
+                <div class="nav-inferieur">
+                    <button id="animation" title="Ouvrir la section des animations">Animations</button>
+                    <button id="arr-plans-multiples" title="Ouvrir la section des arrière-plans multiples">Arrière-plans</button>
+                </div>
+                <div class="contenu-animations">
+                    <h3>Les animations</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu animations">
+                            <h4>Rendu</h4>
+                            <div>
+                                <p>Ce bloc tourne</p>
+                                <div class="animation rotation"></div>
+                            </div>
+                            <div>
+                                <p>Ce bloc se déplace</p>
+                                <div class="animation deplacement"></div>  
+                            </div>
+                            <div class="conteneur-dimension">
+                                <p>Ce bloc grossit et rétrécit</p>
+                                <div class="animation dimension"></div>  
+                            </div>
+                        </section>
+                        <section class="codes">
+                            <h4>Codes</h4>
+                            <h5>Rotation</h5>
+                            <pre>
+.rotation {
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotation {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+                            </pre>
+                            <h5>Déplacement</h5>
+                            <pre>
+.deplacement {
+    animation-name: deplacement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes deplacement {
+    0% {right: 0px;}
+    33% {right: 100px;}
+    66% {right: -100px;}
+    100% {right: 0px;}
+}
+                            </pre>
+                            <h5>Dimension</h5>
+                            <pre>
+.deplacement {
+    animation-name: deplacement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes dimension {
+    0% {height: 100px; width: 100px;}
+    33% {height: 150px; width: 150px;}
+    66% {height: 50px; width: 50px;}
+    100% {height: 100px; width: 100px;}
+}
+                            </pre>
+                        </section>
+                    </div>
+                </div>
+                <div class="contenu-arriere-plans">
+                    <h3>Les arrière-plans multiples</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu arr-plans">
+                            <h4>Rendu</h4>
+                            <div class="arr-plans-multiples">
+                                <p>Cette &lt;div&gt; possède plusieurs arrière-plans!</p>
+                            </div>
+                        </section>
+                        <section class="codes">
+                            <h4>Codes</h4>
+                            <pre>
+.arr-plans-multiples {
+    background-color: #066a83;
+    background-image: 
+        url(/assets/img/photo-arr-plan.jpg), 
+        url(/assets/img/photo-bordure.jpg);
+    background-position: 
+        right top, 
+        left bottom;
+    background-repeat: no-repeat;
+}
+                            </pre>
+                        </section>
+                    </div>
+                </div>
+                
+            </section>
+        </section>
+<!-- LETTRE B -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section B" aria-expanded="false" class="lettre-entete" id="lettre-b">
+                B
+                <span class="details">pour background, boîtes décoratives et bordures</span>
+            </h2>
+            <section class="lettre-corps">
+                <div class="nav-inferieur">
+                    <button id="background" title="Ouvrir la section des nouvelles propriétés background">Background</button>
+                    <button id="boite-decorative" title="Ouvrir la section des boîtes décoratives">Boîtes décoratives</button>
+                    <button id="bordures" title="Ouvrir la section des bordures">Bordures</button>
+                </div>
+                <div class="contenu-background">
+                    <h3>Les nouvelles propriétés de background</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu background">
+                            <h4>Rendu</h4>
+                            <section>
+                                <div class="blend-mode"></div>
+                                <h5>blend-mode</h5>
+                            </section>
+                            <section>
+                                <div class="clip-content-box"></div>
+                                <h5>clip-content-box</h5>
+                            </section>
+                            <section>
+                                <div class="clip-border-box"></div>
+                                <h5>clip-border-box</h5>
+                            </section>
+                            <section>
+                                <div class="clip-padding-box"></div>
+                                <h5>clip-padding-box</h5>
+                            </section>
+                        </section>
+                        <section class="codes background">
+                            <h4>Codes</h4>
+                            <section>
+                                <h5>blend-mode</h5>
+                                <pre>
+.blend-mode {
+    background-blend-mode: hard-light;
+    background-color: aqua;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>clip-content-box</h5>
+                                <pre>
+.clip-content-box {
+    background-clip: content-box;
+    background-origin: content-box;
+    border: 10px solid rgb(0, 255, 255, .5);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>clip-border-box</h5>
+                                <pre>
+.clip-border-box {
+    background-clip: border-box;
+    background-origin: border-box;
+    border: 10px solid rgb(0, 255, 255, .5);
+}                                
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>clip-padding-box</h5>
+                                <pre>
+.clip-padding-box {
+    background-clip: padding-box;
+    background-origin: padding-box;
+    border: 10px solid rgb(0, 255, 255, .5);
+}                           
+                                </pre>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <div class="contenu-boite-decorative">
+                    <h3>Les boîtes décoratives</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu">
+                            <h4>Rendu</h4>
+                            <div class="texte-en-colonne">
+                                <div class="texte-int-colonne">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, sint necessitatibus odit dolores beatae eum! Dolor corporis odio omnis itaque dolorem consequatur sunt nihil inventore minima. Ex cum illo doloremque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. At natus animi blanditiis, deserunt quibusdam repellat doloribus labore quia molestiae distinctio, sapiente hic sint voluptate amet porro modi minus voluptatem facere?</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="codes">
+                            <h4>Codes</h4>
+                            <pre>
+.texte-en-colonne {
+    columns: 0px 3; 
+    font: 8px/16px sans-serif;
+    font-size: .6rem;
+    margin: 30px auto;
+    padding: 15px;
+    vertical-align: text-top;
+    width: 300px;
+}
+
+.texte-int-colonne {
+    border: 3px solid #066a83;
+    box-decoration-break: clone; 
+    padding: 10px;
+}
+                            </pre>
+                        </section>
+                    </div>
+                </div>
+                <div class="contenu-bordures">
+                    <h3>Les bordures</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu">
+                            <h4>Rendu</h4>
+                            <div class="bordure-image">
+                                <p>Bordure avec image d'eau en arrière-plan qui se répète.</p>
+                            </div>       
+                        </section>
+                        <section class="codes">
+                            <h4>Codes</h4>
+                            <pre>
+.bordure-image {
+    border: 10px solid transparent;
+    border-image: 
+    url('../img/fond-eau.jpg') 
+        50 round;
+    padding: 20px;
+    text-align: center;
+}
+                            </pre>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </section>
+<!-- LETTRE D -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section D" aria-expanded="false" class="lettre-entete" id="lettre-d">
+                D 
+                <span class="details">pour dégradés</span>
+            </h2>
+            <section class="lettre-corps">
+                <h3>Les dégradés</h3>
+                <div class="boite-exemple">
+                    <section class="rendu gradient">
+                        <h4>Rendu</h4>
+                        <section>
+                            <div class="lineaire"></div>
+                            <h5>Dégradé linéaire oblique</h5>                           
+                        </section>
+                        <section>
+                            <div class="lineaire-multiples-couleurs"></div>
+                            <h5>Dégradé linéaire aux multiples couleurs</h5>
+                        </section>
+                        <section>
+                            <div class="radial rond"></div>
+                            <h5>Dégradé radial</h5>
+                        </section>
+                        <section>
+                            <div class="radial-multiples-couleurs rond"></div>
+                            <h5>Dégradé radial aux multiples couleurs</h5>
+                        </section>
+                    </section>
+                    <section class="codes">
+                        <h4>Codes</h4>
+                        <section>
+                            <h5>Dégradé linéaire oblique</h5> 
+                            <pre>
+.lineaire {
+    background: 
+        linear-gradient
+        (to bottom right, #066a83, #00ffff)
+}
+                            </pre>
+                        </section>
+                        <section>
+                            <h5>Dégradé linéaire aux multiples couleurs</h5>
+                            <pre>
+.lineaire-multiples-couleurs {
+    background: 
+        linear-gradient
+        (to left, 
+        #066a83,  #fff, #ffa500, #00ffff);
+}
+                            </pre>
+                        </section>
+                        <section>
+                            <h5>Dégradé radial</h5>
+                            <pre>
+.radial {
+    background: 
+        radial-gradient(#066a83, #00ffff);
+}
+                            </pre>
+                        </section>
+                        <section>
+                            <h5>Dégradé radial aux multiples couleurs</h5>
+                            <pre>
+.radial-multiples-couleurs {
+    background:
+        radial-gradient(circle at 50% 0,
+            #00ffff,
+            rgba(255,0,0,0) 70.71%),
+        radial-gradient(circle at 6.7% 75%,
+            #ffa500,
+            rgba(0,0,255,0) 70.71%),
+        radial-gradient(circle at 93.3% 75%,
+            #066a83,
+            rgba(0,255,0,0) 70.71%) #fff;
+}
+                            </pre>
+                        </section>                      
+                    </section>
+                </div>
+            </section>
+        </section>
+<!-- LETTRE F -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section F" aria-expanded="false" class="lettre-entete" id="lettre-f">
+                F
+                <span class="details">pour filtres, fontfaces et formes géométriques</span>
+            </h2>
+            <section class="lettre-corps">
+                <div class="nav-inferieur">
+                    <button id="filtre" title="Ouvrir la section des filtres">Filtres</button>
+                    <button id="fontface" title="Ouvrir la section des fontface">Fontfaces</button>
+                    <button id="formes" title="Ouvrir la section des formes géométriques">Formes</button>
+                </div>
+                <div class="contenu-filtre">
+                    <h3>Les filtres</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu filtre">
+                            <h4>Rendu</h4>                          
+                            <figure>
+                                <img src="./assets/img/photo.jpg" alt="Portrait d'une jolie demoiselle souriante avec le filtre sepia" class="sepia">
+                                <figcaption>Sepia</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/photo.jpg" alt="Portrait d'une jolie demoiselle souriante avec le filtre blur" class="blur">
+                                <figcaption>Blur</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/photo.jpg" alt="Portrait d'une jolie demoiselle souriante avec le filtre drop-shadow" class="drop-shadow">
+                                <figcaption>Drop Shadow</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/photo.jpg" alt="Portrait d'une jolie demoiselle souriante avec le filtre opacity" class="opacity">
+                                <figcaption>Opacity</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/photo.jpg" alt="Portrait d'une jolie demoiselle souriante avec le filtre contrast" class="contrast">
+                                <figcaption>Contrast</figcaption>
+                            </figure>                          
+                        </section>
+                        <section class="codes filtres">
+                            <h4>Codes</h4>
+                            <section>
+                                <h5>Sépia</h5>
+                                <pre>
+.sepia {
+    filter: sepia(60%);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Blur</h5>
+                                <pre>
+.blur {
+    filter: blur(5px);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Drop Shadow</h5>
+                                <pre>
+.drop-shadow {
+    filter: 
+        drop-shadow(16px 16px 20px red) 
+        invert(75%);
+}       
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Opacité</h5>
+                                <pre>
+.opacity {
+    filter: opacity(25%);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Contraste</h5>
+                                <pre>
+.contrast {
+    filter: contrast(300%);
+}
+                                </pre>
+                            </section>
+                            
+                        </section>
+                    </div>
+                </div>
+                <div class="contenu-fontfaces">
+                    <h3>Les fontfaces</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu">
+                            <h4>Rendu</h4>
+                            <p class="fontface">Ce texte est lié à la police "Junky" venant d'un dossier local.</p>
+                        </section>
+                        <section class="codes">
+                            <h4>Codes</h4>
+                            <pre>
+@font-face {
+    font-family: 'Junky';
+    src: url("../fonts/JINKY.woff") 
+        format("woff");
+}
+
+.fontface {
+    font-family: 'Junky';
+}
+                            </pre>
+                        </section>
+                    </div>
+                </div>
+                <div class="contenu-formes" >
+                    <h3>Le formes géométriques</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu formes">
+                            <h4>Rendu</h4>
+                            <div class="forme triangle"></div>
+                            <div class="forme coeur"></div>
+                            <div class="forme loupe"></div>
+                            <div class="forme dialogue"></div>
+                            <div class="forme etoile"></div>
+                            <div class="forme infini"></div>
+                        </section>
+                        <section class="codes formes">
+                            <h4>Codes</h4>
+                            <p>Toutes les formes sont inspirées de l'article "The Shapes of <abbr title="Cascading Style Sheet">CSS"</abbr> de <a href="https://css-tricks.com/the-shapes-of-css/" title="Lien vers The Shape of CSS - CSS-tricks" target="_blank"><abbr title="Cascading Style Sheet">css</abbr>-tricks.com</a></p>
+                            <section>
+                                <h5>Le triangle</h5>
+                                <pre>
+.triangle {
+    border-bottom: 150px solid #066a83;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    height: 0;
+    width: 0;
+}   
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Le coeur</h5>
+                                <pre>
+.coeur {
+    background-color: #066a83;
+    display: inline-block;
+    height: 100px;
+    margin-top: 80px;
+    padding: 0;
+    position: relative;
+    transform: rotate(-45deg);
+    width: 100px;
+}
+
+.coeur:before,
+.coeur:after {
+    background-color:#066a83;
+    border-radius: 50%;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 100px;
+}
+
+.coeur:before {
+    left: 0;
+    top: -50%;
+}
+
+.coeur:after {
+    left: 50%;
+    top: 0;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>La loupe</h5>
+                                <pre>
+.loupe {
+    border: 0.1em solid #066a83;
+    border-radius: 0.35em;
+    box-sizing: content-box;
+    display: inline-block;
+    font-size: 12em;
+    height: 100px;
+    position: relative;
+    width: 100px;
+}
+
+.loupe:before {
+    background: #066a83;
+    border-width: 0;
+    bottom: -0.1em;
+    content: "";
+    display: inline-block;
+    height: 0.08em;
+    position: absolute;
+    right: -0.25em;
+    transform: rotate(45deg);
+    width: 0.35em;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>La bulle dialogue</h5>
+                                <pre>
+.dialogue {
+    background: #066a83;
+    border-radius: 10px;
+    height: 100px;
+    margin-top: 70px;
+    position: relative;
+    width: 150px;
+}
+
+.dialogue:before {
+    border-bottom: 13px solid transparent;
+    border-right: 26px solid #066a83;
+    border-top: 13px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 100%;
+    top: 35px;
+    width: 0;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>L'étoile</h5>
+                                <pre>
+.etoile {
+    border-bottom: 70px solid #066a83;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    height: 0px;
+    margin: 100px 0;
+    position: relative;
+    transform: rotate(35deg);
+    width: 0px;
+}
+
+.etoile::before {
+    border-bottom: 80px solid #066a83;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    content: '';
+    height: 0;
+    left: -65px;
+    position: absolute;
+    top: -45px;
+    transform: rotate(-35deg);
+    width: 0;
+}
+
+.etoile::after {
+    border-bottom: 70px solid #066a83;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    content: '';
+    height: 0px;
+    left: -105px;
+    position: absolute;
+    top: 3px;
+    transform: rotate(-70deg);
+    width: 0px;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Le signe de l'infini</h5>
+                                <pre>
+.infini {
+    box-sizing: content-box;
+    height: 100px;
+    position: relative;
+    width: 212px;
+}
+
+.infini:before,
+.infini:after {
+    border: 20px solid #066a83;
+    border-radius: 50px 50px 0 50px;
+    box-sizing: content-box;
+    content: "";
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 60px;
+}
+
+.infini:after {
+    border-radius: 50px 50px 50px 0;
+    left: auto;
+    right: 0;
+    transform: rotate(45deg);
+}
+                                </pre>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+<!-- LETTRE G -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section G" aria-expanded="false" class="lettre-entete" id="lettre-g">
+                G 
+                <span class="details">pour display grid</span>
+            </h2>
+            <section class="lettre-corps">
+                <h3>Display Grid</h3>
+                <div class="boite-exemple">
+                    <section class="rendu grid">
+                        <h4>Rendu</h4>
+                            <div class="grid-grilles">
+                                <div class="grid-template-desordre">
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                </div>
+                                <p>Avec grid, on peut placer <br>  nos éléments en <br> "désordre précis".</p>
+                            </div>
+                            <div class="grid-grilles">
+                                <div class="grid-template-invader">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <p>Ce Space Invader est créé sur une grille grid.</p>
+                            </div>                          
+                    </section>
+                    <section class="codes">
+                        <h4>Codes</h4>
+                        <section>
+                            <h5>Désordre précis</h5>
+                            <pre>
+.grid-template-desordre {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.grid-template-desordre div:first-child {
+    grid-area: 2 / 2 / 3 / 3 ;
+}
+
+.grid-template-desordre div:nth-child(2) {
+    grid-area: 6 / 6 / 7 / 7 ;
+}
+
+.grid-template-desordre div:nth-child(3) {
+    grid-area: 3 / 3 / 4 / 6 ;
+}
+
+.grid-template-desordre div:nth-child(4) {
+    grid-area: 5 / 1 / span 2 / span 2 ;
+}
+
+.grid-template-desordre div:last-child {
+    grid-area: 1 / 4 / span 1 / span 3 ;
+}
+                            </pre>
+                        </section>
+                        <section>
+                            <h5>Space Invader</h5>
+                            <pre>
+.grid-template-invader {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.grid-template-invader div {
+    background-color: #066a83;
+}
+
+.grid-template-invader div:first-child {
+    grid-area: 1 / 3 / 2 / 4 ;
+}
+
+.grid-template-invader div:nth-child(2) {
+    grid-area: 1 / 9 / 2 / 10 ;
+}
+
+.grid-template-invader div:nth-child(3) {
+    grid-area: 2 / 4 / 3 / 5 ;
+}
+
+.grid-template-invader div:nth-child(4) {
+    grid-area: 2 / 8 / 3 / 9 ;
+}
+
+.grid-template-invader div:nth-child(5) {
+    grid-column: 3 / span 7;
+}
+
+.grid-template-invader div:nth-child(6) {
+    grid-column: 2 / span 2;
+}
+
+.grid-template-invader div:nth-child(7) {
+    grid-column: 5 / span 3;
+}
+
+.grid-template-invader div:nth-child(8) {
+    grid-column: 9 / span 2;
+}
+
+.grid-template-invader div:nth-child(9) {
+    grid-column: 1 / span 11;
+}
+
+.grid-template-invader div:nth-child(10) {
+    grid-column: 1 / 2;
+    grid-row: 6 / span 2;
+}
+
+.grid-template-invader div:nth-child(11) {
+    grid-column: 3 / span 7;
+}
+
+.grid-template-invader div:nth-child(12) {
+    grid-column: 11 / 12;
+    grid-row: 6 / span 2;
+}
+
+.grid-template-invader div:nth-child(13) {
+    grid-area: 7 / 3 / 8 / 4;
+}
+
+.grid-template-invader div:nth-child(14) {
+    grid-area: 7 / 9 / 8 / 10;
+}
+
+.grid-template-invader div:nth-child(15) {
+    grid-area: 8 / 4 / 9 / 6;
+}
+
+.grid-template-invader div:nth-child(16) {
+    grid-area: 8 / 7 / 9 / 9;
+}
+                            </pre>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </section>
+<!-- LETTRE M -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section M" aria-expanded="false" class="lettre-entete" id="lettre-m">
+                M 
+                <span class="details">pour Medias Queries</span>
+            </h2>
+            <section class="lettre-corps">
+                <h3>Les Medias Queries</h3>
+                <div class="boite-exemple">
+                    <section class="rendu">
+                        <h4>Rendu</h4>
+                        <p class="mediaqueries">Élargir ou rétrécir l'écran pour voir l'effet.</p>
+                    </section>
+                    <section class="codes">
+                        <h4>Codes</h4>
+                        <pre>
+.mediaqueries {
+    color:#066a83;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    .mediaqueries {
+        background-color: #066a83;
+        color: white
+    }
+}
+                        </pre>
+                    </section>
+                </div>
+            </section>
+        </section>
+ <!-- LETTRE O -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section O" aria-expanded="false" class="lettre-entete" id="lettre-o">
+                O 
+                <span class="details">pour opacité et overflow</span>
+            </h2>
+            <section class="lettre-corps">
+                <div class="nav-inferieur">
+                    <button id="opacite" title="Ouvrir la section de la propriété opacité">Opacité</button>
+                    <button id="overflow" title="Ouvrir la section de la propriété overflow">Overflow</button>
+                </div>
+                <div class="contenu-opacite">
+                    <h3>Les opacités</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu opacite">
+                            <h4>Rendu</h4>   
+                            <figure>
+                                <img src="./assets/img/photo.jpg" alt="Portait d'une jolie demoiselle souriante avec une opacité de 0.1" class="opacite1">
+                                <figcaption>Opacité à 0.1</figcaption>                            
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/photo.jpg" alt="Portait d'une jolie demoiselle souriante avec une opacité de 0.5" class="opacite2">
+                                <figcaption>Opacité à 0.5</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/photo.jpg" alt="Portait d'une jolie demoiselle souriante avec une opacité de 1" class="opacite3">
+                                <figcaption>Opacité à 1</figcaption>
+                            </figure>
+                        </section>
+                        <section class="codes opacite">
+                            <h4>Codes</h4>
+                            <section>
+                                <h5>Opacité à 0.1</h5>
+                                <pre>
+.opacite1 {
+    opacity: 0.1;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Opacité à 0.5</h5>
+                                <pre>
+.opacite2 {
+    opacity: 0.5;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Opacité à 0.1</h5>
+                                <pre>
+.opacite3 {
+    opacity: 1;
+}
+                                </pre>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <div class="contenu-overflow">
+                    <h3>La propriété overflow</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu overflow">
+                            <h4>Rendu</h4> 
+                            <section>  
+                                <h5>Scroll</h5>
+                                <div tabindex="0" class="scroll">
+                                    <img src="./assets/img/photo.jpg" alt="Portait d'une jolie demoiselle souriante avec la propriété overflow: scroll" width="300">                      
+                                </div>                             
+                            </section>
+                            <section>   
+                                <h5>Hidden</h5>    
+                                <div class="hidden">
+                                    <img src="./assets/img/photo.jpg" alt="Portait d'une jolie demoiselle souriante avec la propriété overflow: hidden" width="300">                         
+                                </div>                       
+                            </section>
+                            <section>    
+                                <h5>Auto</h5>   
+                                <div tabindex="0" class="auto">
+                                    <img src="./assets/img/photo.jpg" alt="Portait d'une jolie demoiselle souriante avec la propriété overflow: auto" width="300">                             
+                                </div>                       
+                            </section>
+                            <section>
+                                <h5>Visible</h5>
+                                <div class="visible">
+                                    <img src="./assets/img/photo.jpg" alt="Portait d'une jolie demoiselle souriante avec la propriété overflow: visible" width="250">                           
+                                </div>
+                            </section> 
+                        </section>
+                        <section class="codes overflow">
+                            <h4>Codes</h4>
+                            <section>
+                                <h5>Scroll</h5>
+                                <pre>
+.scroll {
+    overflow: scroll;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Hidden</h5>
+                                <pre>
+.hidden {
+    overflow: hidden;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Auto</h5>
+                                <pre>
+.auto {
+    overflow: auto;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Visible</h5>
+                                <pre>
+.visible {
+    overflow: visible;
+}
+                                </pre>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </section>
+<!-- LETTRE S -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section S" aria-expanded="false" class="lettre-entete" id="lettre-s">
+                S 
+                <span class="details">pour shadow</span>
+            </h2>
+            <section class="lettre-corps">
+                <h3>La propriété shadow</h3>
+                <div class="boite-exemple">
+                    <section class="rendu shadow">
+                        <h4>Rendu</h4>
+                        <div>
+                            <p class="texte-shadow">Texte avec un effet shadow</p>
+                        </div>
+                        <div>
+                            <div class="box-shadow"></div>
+                            <p>Boîte avec un effet shadow</p>
+                        </div>                       
+                    </section>
+                    <section class="codes">
+                        <h4>Codes</h4>
+                        <h5>Propriété text-shadow</h5>
+                        <pre>
+.texte-shadow {
+    text-shadow: 
+        5px 5px 5px rgb(6, 106, 131, .8);
+}
+                        </pre>
+                        <h5>Propriété box-shadow</h5>
+                        <pre>
+.box-shadow {
+    box-shadow: 
+        5px 5px 5px rgb(6, 106, 131, .8);
+}
+                        </pre>
+                    </section>
+                </div>
+            </section>
+        </section>
+<!-- LETTRE T -->
+        <section class="lettre">
+            <h2 tabindex="0" title="Cliquer pour ouvrir la section T" aria-expanded="false" class="lettre-entete" id="lettre-t">
+                T 
+                <span class="details">pour transformations et transitions</span>
+            </h2>
+            <section class="lettre-corps">
+                <div class="nav-inferieur">
+                    <button id="transformation" title="Ouvrir la section de la propriété transformation">Transformations</button>
+                    <button id="transition" title="Ouvrir la section de la propriété transition">Transitions</button>
+                </div>
+                <div class="contenu-transformation">
+                    <h3>Les propriétés de transformations</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu transformations">
+                            <h4>Rendu</h4>
+                            <section>
+                                <div></div>
+                                <h5>Carré à transformer</h5>
+                            </section>
+                            <section>
+                                <div class="matrix"></div>
+                                <h5>Matrix</h5>
+                            </section>
+                            <section>
+                                <div class="translate"></div>
+                                <h5>Translate</h5>
+                            </section>
+                            <section>
+                                <div class="scale"></div>
+                                <h5>Scale</h5>
+                            </section>
+                            <section>
+                                <div class="rotate"></div>
+                                <h5>Rotate</h5>
+                            </section>
+                            <section>
+                                <div class="skew"></div>
+                                <h5>Skew</h5>
+                            </section>
+                            <section>
+                                <div class="perspective"></div>
+                                <h5>Perspective</h5>
+                            </section>
+                        </section>
+                        <section class="codes transformation">
+                            <h4>Codes</h4>
+                            <section>
+                                <h5>Codes globals</h5>
+                                <pre>
+.transformations div {
+    background-color: #066a83;
+    height: 100px;
+    width: 100px;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Matrix</h5>
+                                <pre>
+.matrix {
+    transform: matrix(.5, 1, 1, .5, 2, 2);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Translate</h5>
+                                <pre>
+.translate {
+    transform: translateX(100px);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Scale</h5>
+                                <pre>
+.scale {
+    transform: scaleX(2);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Rotate</h5>
+                                <pre>
+.rotate {
+    transform: rotate(45deg);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Skew</h5>
+                                <pre>
+.skew {
+    transform: skew(60deg, 4deg);
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Perspective</h5>
+                                <pre>
+.perspective {
+    transform: perspective(75px) 
+               rotateX(80deg);
+}
+                                </pre>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <div class="contenu-transition">
+                    <h3>Les propriétés de transitions</h3>
+                    <div class="boite-exemple">
+                        <section class="rendu transitions">
+                            <h4>Rendu</h4>
+                            <h5>Survoler les rectangles!</h5>
+                            <div class="largeur"></div>
+                            <div class="couleur"></div>
+                            <div class="hauteur"></div>
+                            <div class="photo">
+                                <div class="photo-couleur"></div>
+                                <img class="photo-image" src="./assets/img/photo.jpg" alt="Portait d'une jolie demoiselle souriante" width="150">
+                            </div>    
+                        </section>
+                        <section class="codes">
+                            <h4>Codes</h4>
+                            <section>
+                                <h5>Codes globals</h5>
+                                <pre>
+.transitions div {
+    background-color: #066a83;
+    height: 150px;
+    transition: 
+        background-color 
+        height width z-index .5s;
+    width: 150px;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Transition largeur</h5>
+                                <pre>
+.largeur {
+    transition: width .5s ease-out;
+}
+
+.largeur:focus,
+.largeur:hover {
+    width: 350px;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Transition couleur</h5>
+                                <pre>
+.couleur {
+    transition: 
+        background-color .5s ease-in-out;
+}
+
+.couleur:focus,
+.couleur:hover {
+    background-color: #00ffd5;
+}
+                                </pre>  
+                            </section>
+                            <section>
+                                <h5>Transition hauteur</h5>
+                                <pre>
+.hauteur {
+    transition: height .5s ease-in;
+}
+
+.hauteur:focus,
+.hauteur:hover {
+    height: 250px;
+}
+                                </pre>
+                            </section>
+                            <section>
+                                <h5>Transition photo</h5>
+                                <pre>
+.photo {
+    position: relative;
+}
+
+.photo-couleur,
+.photo-image {
+    position: absolute;
+}
+
+.photo-couleur {
+    transition: opacity .5s ease-in;
+    opacity: 1;
+}
+
+.photo-couleur {
+    z-index: 10;
+}
+
+.photo-couleur:focus,
+.photo-couleur:hover {
+    opacity: 0;
+}
+                                </pre>
+                            </section>
+                        </section>
+                    </div>
+                </div>               
+            </section>
+        </section>
+        <a href="#top" title="Retour en haut" class="retour-en-haut">&#10940;</a>
+       
+    </main>
+    <footer>
+        <p><span class="auteur">Émilie Caron</span> | <time datetime="2021-07-16">16 juillet 2021</time></p>
+    </footer>
+    <script src="assets/scripts/index.js"></script>
+</body>
+</html>
